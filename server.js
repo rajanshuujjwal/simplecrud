@@ -22,13 +22,6 @@ app.set('view engine', 'ejs')
 
 
 //Handlers 
-
-// app.get('/', (req, res)  => {
-//  res.sendFile(__dirname + '/index.html')
-// })
-
-
-
 app.get('/', (req, res) => {
   db.collection('quotes').find().toArray(function(err, results) {
   if (err)  return console.log(err)
